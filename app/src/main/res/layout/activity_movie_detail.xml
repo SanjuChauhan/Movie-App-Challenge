@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movieDetailActivity"
+            type="com.app.movieappchallenge.ui.activity.MovieDetailActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/purple_500">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:onClick="@{()->movieDetailActivity.closeScreen()}"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_header_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/iv_back"
+                android:text="@string/lbl_movie_detail"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_placeholder" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_movie_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:drawableStart="@drawable/ic_baseline_star_24"
+                        android:drawablePadding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="rating" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        tools:text="Title" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="year" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="RunTime" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Genre" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_director"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Director" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_writer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Writer" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_actors"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Actors" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_Plot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Plot" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_language"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Language" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Country" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_awards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="Awards" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

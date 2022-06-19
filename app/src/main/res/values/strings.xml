@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Movie App Challenge</string>
+    <string name="msg_no_internet">No internet connection</string>
+    <string name="msg_no_data_found">No data found</string>
+    <string name="lbl_search_movie">Search movie</string>
+    <string name="lbl_movie_detail">Movie Detail</string>
+</resources>
