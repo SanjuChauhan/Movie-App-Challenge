@@ -1,7 +1,7 @@
 # Movie-App-Challenge
 Application to show a list of movies shows and details of it.
 
-User can search the movies shows his details on application.
+User can search for the movies shows and details in application.
 
 # Features Used
 
